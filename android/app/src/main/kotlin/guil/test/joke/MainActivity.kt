@@ -1,4 +1,4 @@
-package com.example.flutter_test_joke
+package guil.test.joke
 
 import io.flutter.embedding.android.FlutterActivity
 
