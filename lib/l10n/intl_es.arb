@@ -1,4 +1,14 @@
 {
     "@@locale": "es",
-    "app_name": "Joke app"
+    "app_name": "Joke app",
+    "error_default": "Hubo un error, intente más tarde",
+    "error_network_not_available": "La red no esta disponible",
+    "error_joke_not_found": "El chiste no esta disponible, intente más tarde",
+    "tag_nsfw": "Nsfw",
+    "tag_religious": "Religioso",
+    "tag_political": "Político",
+    "tag_racist": "Racista",
+    "tag_sexist": "Sexista",
+    "button_see_answer": "Ver respuesta",
+    "button_next_joke": "Siguente chiste"
   }

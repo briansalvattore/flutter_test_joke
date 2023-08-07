@@ -12,7 +12,7 @@ class AppRoute {
         GoRoute(
           path: '/',
           builder: (_, __) {
-            return JokePage();
+            return const JokePage();
           },
         ),
       ],
