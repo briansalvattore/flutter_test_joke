@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:guild_test_joke/main/joke_app.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => buildApp();
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+Future<void> buildApp() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-  @override
-  Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.light.copyWith(
+      statusBarColor: Colors.black,
+      statusBarBrightness: Brightness.dark,
+    ),
+  );
 
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-        textTheme: GoogleFonts.montserratTextTheme(textTheme),
-      ),
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  runApp(
+    ProviderScope(
+      child: JokeApp(),
+    ),
+  );
 }
